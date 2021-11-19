@@ -1,0 +1,6 @@
+<launch>
+    <node name="dino" pkg="dino" type="dino_node">
+    	<param name = "service_name" 	type = "str" value = "make_a_dino"/>
+    	<param name = "topic_name" 	    type = "str" value = "dinosaurs"/>
+    </node>
+</launch>
