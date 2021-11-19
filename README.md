@@ -1,25 +1,27 @@
-# dino
+# Dino
 Dino-generator ROS package
 
 # Usage
 
-using `roslaunch` command:
+### Using `roslaunch` & `rosservice call` commands:
 
 ```
 $ roslaunch dino dino.launch
 
-$ rosservice call /dino/make_a_dino "dino_base: '$dino_base'" 
+$ rosservice call /dino/make_a_dino "dino_base: '$DINO_BASE'" 
 ```
 
-using `rosrun` & `rosservice call`:
+### Using `rosrun` & `rosservice call`:
 
 ```
 $ rosrun dino dino_node
 
-$ rosservice call /dino/make_dino "dino_base: '$dino_base'"
+$ rosservice call /dino/make_dino "dino_base: '$DINO_BASE'"
 ```
 
-To listen the topic:
+_Please note that `roslaunch` and `rosrun` commands gives you different service's names (make_a_dino or make_dino respectively). It's done to demonstrate the use of params_
+
+### To listen the topic:
 
 ```
 rostopic echo /dino/dinosaurus
